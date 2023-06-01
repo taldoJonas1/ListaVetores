@@ -41,3 +41,35 @@ function exe2(){
     alert(`Múltiplos de 3: ${mult3}`)
     alert(`Múltiplos de 2 e de 3: ${mult23}`)
 }
+
+function exe3(){
+    let cod = []
+    let est = []
+    let achou = false
+
+    for(let i = 0; i < 5; i++){
+        cod[i] = Number(prompt(`Informe o código do produto ${i + 1}: `))
+        est[i] = Number(prompt(`Informe o estoque do produto ${i + 1}: `))
+    }
+    let cliente = Number(prompt('Informe o código do cliente'))
+    while(cliente != 0){
+    let codigo = Number(prompt('Qual o código do produto pra comprar'))
+    let qtd = Number(prompt('Qual a quantidade do produto no estoque'))
+
+    for(let i = 0; i < 5; i++){
+        if(codigo == cod[i]){
+            achou = true
+            if(est[i] >= qtd){
+            est[i] = est[i] - qtd
+            }
+            else {
+                alert('Estoque insuficiente')
+            }
+        }
+    }
+    if(!achou){
+        alert('Produto não existe')
+    }
+    }
+    alert(est)
+}
