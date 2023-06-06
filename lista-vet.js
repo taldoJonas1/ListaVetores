@@ -21,6 +21,7 @@ function exe1(){
     alert(`${pares.length} nros pares; São eles: ${pares}`)
     alert(`${impares.length} nros pares; São eles: ${impares}`)
 }
+//vetor.lenght --> imprime o tamanho do vetor
 
 function exe2(){
     let vet = []; let mult2 = []; let mult3 = []; let mult23 = []
@@ -41,6 +42,7 @@ function exe2(){
     alert(`Múltiplos de 3: ${mult3}`)
     alert(`Múltiplos de 2 e de 3: ${mult23}`)
 }
+//vetor.push(elemento) --> para empurrar para a ultima posição
 
 function exe3(){
     let cod = []
@@ -73,3 +75,52 @@ function exe3(){
     }
     alert(est)
 }
+//let achou = false --> cria uma variavel que verifica se há um elemento no vetor
+
+function exe4(){
+
+}
+
+function exe5(){
+    let log = []
+    let ling = []
+
+    for(let i = 0; i < 10; i++){
+        log[i] = Number(prompt('Informe alunos que fazem Lógica.'))
+    }
+    for(let i = 0; i < 10; i++){
+        ling[i] = Number(prompt('Informe alunos que fazem Linguagem.'))
+    }
+    let msm = []
+    for(let i = 0; i < 10; i++){
+        if(ling.includes(log[i])){
+            msm.push(log[i])
+        }
+    }
+    alert(`Alunos que fazem ambas as matérias: ${msm}`)
+}
+//vetor.includes(elemento) --> verifica se o elemento está contido no vetor
+
+function exe6(){
+    let salario = []; let nome = []; let menor = salario[0]; let maior = salario[0]
+    let i
+
+    for(i = 0; i < 10; i++){
+        nome[i] = prompt('Informe o nome.')
+        salario[i] = Number(prompt('Informe o salários.'))
+    }
+    for(i = 0; i < 10; i++){
+        if(salario[i] > maior){
+            maior = salario[i] // atualiza maior
+        }
+        if(salario[i] > menor){
+            menor = salario[i] // atualiza menor
+        }
+    }
+    let nMaior = nome[salario.indexOf(maior)]
+    let nMenor = nome[salario.indexOf(menor)]
+
+    alert(`${nMaior} vai receber o maior salario, que é ${maior}\n
+    ${nMenor} vai receber o maior salario, que é ${menor}`)
+}
+//vetor.indexOf('elemento') --> imprime a posição do elemento dentro do vetor
