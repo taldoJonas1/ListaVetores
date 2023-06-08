@@ -124,3 +124,18 @@ function exe6(){
     ${nMenor} vai receber o maior salario, que é ${menor}`)
 }
 //vetor.indexOf('elemento') --> imprime a posição do elemento dentro do vetor
+
+function exSala1(){
+    let nome = []; let cod = []; let i;
+
+    for(i = 0; i < 5; i++){
+        let aux = Number(prompt('Informe o código do aluno '+ (i + 1) +' : '))
+        while(cod.includes(aux)){
+            aux = prompt('Código já existente, insira um novo.')
+        }
+        cod[i] = aux
+        nome[i] = prompt('Informe o nome do aluno ' + (i + 1) +' : ')
+    }
+    alert(`Códigos: ${cod} \nNomes: ${nome} `)
+    
+}
