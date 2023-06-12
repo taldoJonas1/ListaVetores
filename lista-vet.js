@@ -78,7 +78,17 @@ function exe3(){
 //let achou = false --> cria uma variavel que verifica se há um elemento no vetor
 
 function exe4(){
+    let vet = []; let i; posicao = []
 
+    for(i = 0; i < 3; i++){
+        vet[i] = Number(prompt('Insira um número inteiro.'))
+    }
+    for(i = 0; i < 15; i++){
+        if(vet[i].includes(30)){
+            posicao.push(i)
+        }
+    }
+    alert(`Posições em que o 30 aparece: ${posicao}`)
 }
 
 function exe5(){
@@ -103,7 +113,7 @@ function exe5(){
 
 function exe6(){
     let salario = []; let nome = []; let menor = salario[0]; let maior = salario[0]
-    
+
     let i
 
     for(i = 0; i < 10; i++){
@@ -178,9 +188,8 @@ function exe9(){
         }
         else{
             novoprc[i] = "Não mudou."
-        }
-        
-        }
+        }  
+    }
     for(i = 0; i < 10; i++){
         alert(`Nome do produto: ${nome[i]}\nCódigo do produto: ${cod[i]}\nPreço do produto: ${prc[i]}\nNovo preço do produto: ${novoprc[i]}`)
     } 
