@@ -103,6 +103,7 @@ function exe5(){
 
 function exe6(){
     let salario = []; let nome = []; let menor = salario[0]; let maior = salario[0]
+    
     let i
 
     for(i = 0; i < 10; i++){
@@ -125,6 +126,65 @@ function exe6(){
 }
 //vetor.indexOf('elemento') --> imprime a posição do elemento dentro do vetor
 
+function exe7(){
+    let nros = []; let i; let neg = 0; let pos = 0
+
+    for(i = 0; i < 10; i++){
+        nros[i] = Number(prompt('Informe um número (positivo ou negativo).'))
+        if(nros[i] < 0){
+            neg++
+        }
+        if(nros[i] >= 0){
+            pos += nros[i] // += mesma coisa q pos = pos + nros[i]
+        }
+    }
+    alert(`Quantidade de nros negativos: ${neg}\nSoma dos nros positivos: ${pos}`)
+}
+
+function exe8(){
+    let nome = []; let media = []; let i; let maior; let nmaiornota; let aprov
+
+    for(i = 0; i < 7; i++){
+        nome[i] = prompt('Informe o nome do aluno:')
+        media[i] = Number(prompt('Informe a média final do aluno:'))
+        if(media[i] > maior){
+            maior.pull(media[i])
+            nmaiornota.pull(nome[i])
+        }
+        if(media[i] < 7){
+            aprov = (media[i]/4) + 2.5
+            alert(`O aluno precisa tirar pelo menos ${aprov} no exame final para ser aprovado.`)
+        }
+    }
+    alert(`O aluno com a maior média teve nota ${media[1]} e foi o ${nome[1]}`)
+}
+
+function exe9(){
+    let nome = []; let cod = []; let prc = []; let i; let novoprc = []
+
+    for(i = 0; i < 10; i++){
+        nome[i] = prompt('Insira o nome do produto.')
+        cod[i] = Number(prompt('Insira o código do produto.'))
+        prc[i] = Number(prompt('Insira o preço do produto.'))
+        if((cod[i] % 2 == 0) && (prc[i] > 1000)){
+            novoprc[i] = prc[i] * 1.2
+        }
+        else if(cod[i] % 2 == 0){
+            novoprc[i] = prc[i] * 1.15
+        }
+        else if(prc[i] > 1000){
+            novoprc[i] = prc[i] * 1.1
+        }
+        else{
+            novoprc[i] = "Não mudou."
+        }
+        
+        }
+    for(i = 0; i < 10; i++){
+        alert(`Nome do produto: ${nome[i]}\nCódigo do produto: ${cod[i]}\nPreço do produto: ${prc[i]}\nNovo preço do produto: ${novoprc[i]}`)
+    } 
+}
+
 function exSala1(){
     let nome = []; let cod = []; let i;
 
@@ -137,5 +197,4 @@ function exSala1(){
         nome[i] = prompt('Informe o nome do aluno ' + (i + 1) +' : ')
     }
     alert(`Códigos: ${cod} \nNomes: ${nome} `)
-    
 }
