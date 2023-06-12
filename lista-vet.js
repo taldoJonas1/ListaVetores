@@ -158,6 +158,7 @@ function exe8(){
     }
     alert(`O aluno com a maior média teve nota ${media[1]} e foi o ${nome[1]}`)
 }
+//vetor.pull(elemento) --> para puxar para a primeira posição
 
 function exe9(){
     let nome = []; let cod = []; let prc = []; let i; let novoprc = []
